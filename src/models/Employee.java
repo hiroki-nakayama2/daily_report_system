@@ -44,7 +44,7 @@ public class Employee {
 	@Column(name = "name", nullable = false)
 	private String name;
 
-	@Column(name = "passqord", length = 64, nullable = false)
+	@Column(name = "password", length = 64, nullable = false)
 	private String password;
 
 	@Column(name = "admin_flag", nullable = false)

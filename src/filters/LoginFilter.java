@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import models.Employee;
+
 /**
  * Servlet Filter implementation class LoginFilter
  */
@@ -61,17 +62,18 @@ public class LoginFilter implements Filter {
                     return;
                 }
             } else {                                    // ログイン画面について
-				//ログインしているのにログイン画面を表示しようとした場合は
-				//システムのトップページにれダイレクト
-				if(e != null){
-					((HttpServletResponse)response).sendRedirect(context_path + "/");
-					return;
-				}
+                // ログインしているのにログイン画面を表示させようとした場合は
+                // システムのトップページにリダイレクト
+            	 if(e != null) {
+                     ((HttpServletResponse)response).sendRedirect(context_path + "/");
+                     return;
+                 }
+             }
+         }
 
-			}
-		}
-		chain.doFilter(request, response);
-	}
+         chain.doFilter(request, response);
+     }
+
 
 	/**
 	 * @see Filter#init(FilterConfig)
