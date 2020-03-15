@@ -48,6 +48,8 @@
         </c:choose>
 
         <p><a href="<c:url value="/reports/index" />">一覧に戻る</a></p>
-        <p><a href="<c:url value="/reports/good?good=${report.good}" />">good</a></p>
+        <c:if test="${sessionScope.login_employee.id != report.employee.id}">
+        	<p><a href="<c:url value="/reports/good?id=${report.id}" />">good!</a></p>
+        </c:if>
     </c:param>
 </c:import>
