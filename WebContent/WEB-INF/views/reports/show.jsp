@@ -24,6 +24,11 @@
                             </td>
                         </tr>
                         <tr>
+                        	<th>いいね</th>
+                        	<td>
+                        		<a href="<c:url value="/reports/goodshow?id=${report.id}" />">${report.good}</a>
+                        	</td>
+                        <tr>
                             <th>登録日時</th>
                             <td>
                                 <fmt:formatDate value="${report.created_at}" pattern="yyyy-MM-dd HH:mm:ss" />

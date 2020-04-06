@@ -62,7 +62,7 @@ public class Report {
 	@Column(name = "updated_at", nullable = false)
 	private Timestamp updated_at;
 
-	@Column(name = "good", nullable = false)
+	@Column(name = "good", columnDefinition = "int default 0")
 	private Integer good;
 
 	public Integer getId() {

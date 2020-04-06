@@ -50,6 +50,7 @@ public class ReportsCreateServlet extends HttpServlet {
 			if(rd_str != null && !rd_str.equals("")){
 				report_date = Date.valueOf(request.getParameter("report_date"));
 			}
+			r.setGood(0);
 			r.setReport_date(report_date);
 
 			r.setTitle(request.getParameter("title"));
