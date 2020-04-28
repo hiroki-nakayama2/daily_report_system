@@ -65,6 +65,12 @@ public class Report {
 	@Column(name = "good", columnDefinition = "int default 0")
 	private Integer good;
 
+	@Column(name = "begin", nullable = true)
+	private String begin;
+
+	@Column(name = "finish", nullable = true)
+	private String finish;
+
 	public Integer getId() {
 		return id;
 	}
@@ -127,6 +133,22 @@ public class Report {
 
 	public void setGood(Integer good){
 		this.good = good;
+	}
+
+	public String getBegin(){
+		return begin;
+	}
+
+	public void setBegin(String begin){
+		this.begin = begin;
+	}
+
+	public String getFinish(){
+		return finish;
+	}
+
+	public void setFinish(String finish){
+		this.finish = finish;
 	}
 
 
